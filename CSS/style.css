@@ -113,6 +113,7 @@ main header .routes span {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10000;
 }
 .loader {
   position: relative;
@@ -149,3 +150,4 @@ main header .routes span {
     transform: translate(-25px, -25px) scale(1);
   }
 }
+
