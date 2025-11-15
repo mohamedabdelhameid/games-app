@@ -1,0 +1,151 @@
+* {
+  scrollbar-color: #2f2d2d #000;
+}
+body {
+  font-family: cursive;
+}
+header img {
+  width: 100%;
+  height: 300px;
+}
+nav {
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+nav .custom-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .custom-navbar .logo img {
+  width: 40px;
+  position: relative;
+  top: -5px;
+}
+nav .custom-navbar .logo .logoName {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+  font-size: 25px;
+}
+main .sectionsRoute {
+  top: 75px !important;
+}
+main header .routes {
+  gap: 30px;
+}
+main header .routes span {
+  background-color: rgb(171 172 173 / 24%);
+  padding: 5px 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  backdrop-filter: blur(15px);
+  &:hover {
+    color: rgb(0, 128, 255);
+    transform: scale(1.08);
+  }
+}
+.active {
+  color: rgb(0, 128, 255);
+  transform: scale(1.08);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.cards .custom-card {
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 13px;
+  filter: grayscale(0.8);
+  transition: 0.3s;
+  overflow: hidden;
+  &:hover {
+    filter: grayscale(0);
+    transform: translateY(-7px) scale(0.99);
+    perspective: 20px;
+  }
+}
+.cards .custom-card .card-body p {
+  font-weight: 200;
+  color: gray;
+}
+.customSpan {
+  background-color: rgb(1, 37, 74);
+  padding: 8px 10px;
+  border-radius: 9px;
+}
+.additionSpan {
+  background-color: rgba(0, 27, 53, 0.825);
+  padding: 8px 10px;
+  border-radius: 9px;
+}
+
+.gameDetails {
+  z-index: 5000;
+  overflow: hidden;
+}
+.gameDetails .container .body .contentDetails span {
+  background-color: rgba(0, 27, 53, 0.825);
+  padding: 3px 10px;
+  border-radius: 9px;
+}
+.gameDetails .container .body .contentDetails p {
+  font-weight: 200;
+  color: gray;
+}
+.close {
+  padding: 10px 15px;
+  background-color: #de3500;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 25px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #8d2100;
+  }
+}
+/* HTML: <div class="loader"></div> */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #de3500;
+  transform: rotateX(65deg) rotate(45deg);
+  /* transform: perspective(200px) rotateX(65deg) rotate(45deg); */
+  color: #fff;
+  animation: layers1 1s linear infinite alternate;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  animation: layerTr 1s linear infinite alternate;
+}
+
+@keyframes layers1 {
+  0% {
+    box-shadow: 0px 0px 0 0px;
+  }
+  90%,
+  100% {
+    box-shadow: 20px 20px 0 -4px;
+  }
+}
+@keyframes layerTr {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-25px, -25px) scale(1);
+  }
+}
