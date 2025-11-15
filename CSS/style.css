@@ -86,7 +86,7 @@ main header .routes span {
 
 .gameDetails {
   z-index: 5000;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .gameDetails .container .body .contentDetails span {
   background-color: rgba(0, 27, 53, 0.825);
@@ -150,4 +150,5 @@ main header .routes span {
     transform: translate(-25px, -25px) scale(1);
   }
 }
+
 
